@@ -51,6 +51,9 @@ class GameView: UIView ,UIDynamicAnimatorDelegate{
         }
         
         addSubview(view)
+        if let grav = gravity{
+            grav.addItem(view)
+        }
         if let col = collision  {
             col.addItem(view)
         }
